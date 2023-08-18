@@ -43,11 +43,8 @@ calcBtn.addEventListener("click", function(){
 
     saveBtn.addEventListener("click", function(){
         const save = saveInput.value;
-        if (save === "" || isNaN(save)){
-            alert("Please enter a valid number");
-            return;
-        }
-        // updateed total balance get from above
+       
+        // updated total balance get from above
         const totalBal = parseFloat(totalBalance.innerText);
         //  saveBalance calculate in %
         const percentage = parseFloat(save) / 100;
@@ -55,6 +52,10 @@ calcBtn.addEventListener("click", function(){
         saveAmount.innerText = saveBalance + " taka";
         const remainingBal = (parseFloat(totalBal) - parseFloat(saveBalance)).toFixed(1);
         remainingBalance.innerText = remainingBal + " taka";
+        if (save === "" || isNaN(save)){
+            alert("Please enter a valid number");
+            return;
+        }
         if (remainingBal < 0){
             alert("You have no money left for your percentage.");
             saveAmount.innerText = '';
