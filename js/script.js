@@ -47,10 +47,11 @@ calcBtn.addEventListener("click", function(){
             alert("Please enter a valid number");
             return;
         }
-
+        // updateed total balance get from above
+        const totalBal = parseFloat(totalBalance.innerText);
         //  saveBalance calculate in %
         const percentage = parseFloat(save) / 100;
-        const saveBalance = ( parseFloat(totalBal) * percentage).toFixed(1);
+        const saveBalance = (totalBal * percentage).toFixed(1);
         saveAmount.innerText = saveBalance + " taka";
         const remainingBal = (parseFloat(totalBal) - parseFloat(saveBalance)).toFixed(1);
         remainingBalance.innerText = remainingBal + " taka";
