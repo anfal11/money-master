@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money Master</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body>
+
+    <h2 class="text-5xl text-[#31A5AC] text-center font-bold my-9"> Money Master</h2>
+    <section class="grid grid-cols-1 lg:grid-cols-2 gap-20 max-w-5xl mx-auto">
+
+        <!-- <div class="border border-black"> -->
+        <div>
+        <img src="./images/money-bg.jpg" alt="money-img">
+        </div>
+
+        <!-- <div class="bg-[#F8F8F8] lg:w-[1000px] border border-black text-center"> -->
+        <div class="bg-[#F8F8F8] text-center">
+            <!-- income container -->
+            <h1 class="font-medium text-lg md:text-2xl text-center mt-4 underline"> Income </h1>
+            
+            <!-- income input -->
+            <label class="font-medium text-lg md:text-xl mr-2">Income:
+                <input id="income-input" class="bg-[#DCDCDC] rounded-sm outline-none px-4 py-2 mb-2 mt-2 ml-2" type="text" id="income-field">
+            </label>
+            
+            <!-- exoanse container -->
+            <h1 class="font-medium text-lg md:text-2xl text-center underline"> Expenses </h1>
+            
+            <!-- food input from expanse -->
+            <label class="font-medium text-lg md:text-xl">Food: 
+                <input id="food-amount" class="bg-[#DCDCDC] rounded-sm outline-none px-4 py-2 mb-2 mt-2 ml-5" type="text" id="income-field">
+            </label>
+            
+            <!-- Rent input from expanse -->
+            <label class="font-medium ttext-lg md:text-xl block">Rent: 
+                <input id="rent-amount" class="bg-[#DCDCDC] rounded-sm outline-none px-4 py-2 mb-2 mt-2 ml-2 md:ml-7" type="text" id="income-field">
+            </label>
+            
+            <!-- Clothes input from expanse -->
+            <label class="font-medium text-lg md:text-xl">Clothes: 
+                <input id="cloth-amount" class="bg-[#DCDCDC] rounded-sm outline-none px-4 py-2 mb-5 mt-2 ml-2" type="text" id="income-field">
+            </label>
+
+            <!-- Calculate button -->
+            <button id="calculate-btn" class="bg-[#59A5FF] text-white rounded w-[200px] block mx-auto px-14 py-3 text-center shadow-[#0000001a] font-bold text-xl"> Calculate </button> 
+
+            <!-- innerhtml total expanse  -->
+            <p class="font-medium text-lg md:text-2xl text-center mt-7"> Total Expenses: <span  id="total-expense"> </span> </p>
+            <!-- Balance innerhtml -->
+            <p class="font-medium text-lg md:text-2xl text-center mt-3"> Balance: <span  id="total-balance"> </span> </p>
+
+            <!-- Save input -->
+            <label class="font-medium text-lg md:text-xl"> Save 
+                <input id="save-input" class="bg-[#DCDCDC] rounded-sm outline-none w-[120px] text-center py-2 mb-7 mt-5 ml-2" type="text"> <span>% </span>
+            <!-- save button  -->
+                <button id="save-btn" class="bg-[#59A5FF] text-white rounded w-[100px] mx-auto py-2 text-center shadow-[#0000001a] font-bold text-lg md:text-xl"> Save </button>
+            </label>
+
+            <!-- innerhtml  after save amount -->
+            <p class="font-semibold text-lg md:text-2xl text-center mt-1"> Saving amount to Bank: <span  id="save-amount"> </span> </p>
+            
+            <!-- remaining balance after save amount -->
+            <p class="font-semibold text-lg md:text-2xl text-center mt-3"> Remaining Balance in my Pocket: <span id="remaining-balance"> </span> </p>
+        </div>
+    </section>
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
