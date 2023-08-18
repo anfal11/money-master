@@ -55,7 +55,7 @@ calcBtn.addEventListener("click", function(){
         const remainingBal = (parseFloat(totalBal) - parseFloat(saveBalance)).toFixed(1);
         remainingBalance.innerText = remainingBal + " taka";
         if (remainingBal < 0){
-            alert("You have no money left");
+            alert("You have no money left for your percentage.");
             saveAmount.innerText = '';
             remainingBalance.innerText = "";
         }
